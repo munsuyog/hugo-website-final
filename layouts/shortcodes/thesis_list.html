@@ -1,0 +1,13 @@
+{{ $category := .Get "category" }}
+{{ $theses := where .Site.RegularPages "Section" (printf "theses/%s" $category) }}
+
+{{ range $theses }}
+<div class="thesis">
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p><span class="type">{{ .Params.type }}</span><br>Supervisors: 
+  {{ range $supervisor := .Params.supervisors }}
+    <a href="/people/{{ $supervisor | urlize }}" target="">{{ $supervisor }}</a>,
+  {{ end }}
+  </p>
+</div>
+{{ end }}
