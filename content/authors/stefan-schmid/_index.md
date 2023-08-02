@@ -25,5 +25,5 @@ social:
     icon: google-scholar
 superuser: false
 user_groups:
-  - HeadS
+  - Head
 ---
