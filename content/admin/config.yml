@@ -18,7 +18,6 @@ collections:
       - { name: "date", label: "Date", widget: "datetime" }
       - { name: "author", label: "Author", widget: "string" }
       - { name: "body", label: "Body", widget: "markdown" }
-      - { name: "image", label: "Image", widget: "image", required: false }
 
   - name: "events"
     label: "Events"
